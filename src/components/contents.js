@@ -7,6 +7,7 @@ const PRE = [
 ]
 
 const POST = [
+  { slug: "data-details", title: "Details About the CDC Data" },
   { slug: "about-us", title: "About Us" },
   { slug: "references", title: "References" },
 ]

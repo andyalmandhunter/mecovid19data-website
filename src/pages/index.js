@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import Contents from "../components/contents"
 import Plots from "../components/plots"
 import About from "../components/about"
+import DataDetails from "../components/datadetails"
 import renderRemark from "../components/remark"
 
 const IndexPage = ({ data }) => (
@@ -16,6 +17,7 @@ const IndexPage = ({ data }) => (
       {renderRemark(data.markdownRemark.htmlAst)}
     </div>
     <Plots />
+    <DataDetails />
     <About />
     <div className="max-w-screen-sm mx-auto">
       <h1 id="references" className="px-4 mt-4 text-3xl font-semibold">
