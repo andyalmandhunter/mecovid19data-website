@@ -3,11 +3,14 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import renderRemark from "../components/remark"
 
-const About = () => {
+const DataDetails = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        markdownRemark(frontmatter: { slug: { eq: "about" } }) {
+        markdownRemark(frontmatter: { slug: { eq: "data-details" } }) {
+          frontmatter {
+            slug
+          }
           htmlAst
         }
       }
@@ -15,10 +18,13 @@ const About = () => {
   )
 
   return (
-    <div className="max-w-screen-sm mx-auto">
+    <div
+      id={data.markdownRemark.frontmatter.slug}
+      className="max-w-screen-sm mx-auto"
+    >
       {renderRemark(data.markdownRemark.htmlAst)}
     </div>
   )
 }
 
-export default About
+export default DataDetails
