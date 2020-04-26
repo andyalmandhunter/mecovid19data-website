@@ -39,7 +39,7 @@ const IndexPage = ({ data }) => (
 )
 
 const Reference = ({ slug, text, link, index }) => (
-  <p
+  <div
     className={`${
       index > 0 ? "pt-2" : ""
     } pb-2 flex leading-normal text-base sm:text-lg`}
@@ -53,7 +53,7 @@ const Reference = ({ slug, text, link, index }) => (
       </a>
       .
     </div>
-  </p>
+  </div>
 )
 
 export const query = graphql`
