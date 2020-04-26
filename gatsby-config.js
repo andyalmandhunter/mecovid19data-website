@@ -34,6 +34,15 @@ module.exports = {
     },
     `gatsby-transformer-yaml`,
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Maine COVID-19 Data`,
+        short_name: `mecovid19data`,
+        start_url: `/`,
+        icon: `src/images/maine-icon.png`, // This path is relative to the root of the site.
+      },
+    },
   ],
   developMiddleware: app => {
     app.use(
