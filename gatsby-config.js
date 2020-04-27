@@ -40,6 +40,8 @@ module.exports = {
         name: `Maine COVID-19 Data`,
         short_name: `mecovid19data`,
         start_url: `/`,
+        background_color: `white`,
+        theme_color: `white`,
         display: `minimal-ui`,
         icon: `src/images/maine-icon.png`, // This path is relative to the root of the site.
       },
