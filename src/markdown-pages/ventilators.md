@@ -1,6 +1,6 @@
 ---
 type: plot
-order: 11
+order: 12
 filename: ventilators.svg
 slug: ventilators
 title: Ventilators

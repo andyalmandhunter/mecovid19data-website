@@ -1,6 +1,6 @@
 ---
 type: plot
-order: 10
+order: 11
 filename: age_range.svg
 slug: age-range
 title: Age Range
