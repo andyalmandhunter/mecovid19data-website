@@ -10,9 +10,15 @@ const IndexPage = ({ data }) => (
     <div className="max-w-screen-sm mx-auto">
       <p className="px-4 py-1 mt-2">
         We've stopped updating this page (life just got too busy). Meanwhile,
-        the Maine CDC has made a lot more data available on their COVID-19
-        dashboard. Please check there for up-to-date information, or check out
-        the references listed below. Thanks for your continued interest!
+        the Maine CDC has made a lot more data available on their{" "}
+        <a
+          href="https://www.maine.gov/dhhs/mecdc/infectious-disease/epi/airborne/coronavirus/data.shtml"
+          className="text-blue-700 underline hover:no-underline"
+        >
+          COVID-19 dashboard
+        </a>
+        . Please check there for up-to-date information, or check out the
+        references listed below.
       </p>
     </div>
     <div className="max-w-screen-sm mx-auto">
