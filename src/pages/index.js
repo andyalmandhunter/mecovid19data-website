@@ -3,22 +3,18 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Contents from "../components/contents"
-import Plots from "../components/plots"
-import About from "../components/about"
-import DataDetails from "../components/datadetails"
-import renderRemark from "../components/remark"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <Contents />
     <div className="max-w-screen-sm mx-auto">
-      {renderRemark(data.markdownRemark.htmlAst)}
+      <p className="px-4 py-1 mt-2">
+        We've stopped updating this page (life just got too busy). Meanwhile,
+        the Maine CDC has made a lot more data available on their COVID-19
+        dashboard. Please check there for up-to-date information, or check out
+        the references listed below. Thanks for your continued interest!
+      </p>
     </div>
-    <Plots />
-    <DataDetails />
-    <About />
     <div className="max-w-screen-sm mx-auto">
       <h1 id="references" className="px-4 mt-4 text-3xl font-semibold">
         References
@@ -58,13 +54,6 @@ const Reference = ({ slug, text, link, index }) => (
 
 export const query = graphql`
   query IndexPageQuery {
-    markdownRemark(frontmatter: { slug: { eq: "summary" } }) {
-      frontmatter {
-        title
-        slug
-      }
-      htmlAst
-    }
     allReferencesYaml {
       edges {
         node {
